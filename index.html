@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchy: Exercise 1</title>
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v4.js"></script>
+
+    <!-- Custom files -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>INFO 474</h1> 
+            <h2>a2-Data Exploration</h2>
+            <p>Yutong Pan| 4/22/2017| All data sources from <a href="http://www.who.int/en/">WHO</a></a></p> 
+        </div>
+    </div>
+    <div class="container">
+        <h1>Global Information System on Alcohol and Health</h1>
+        <h4>This visualization describes the worldwide youth alcohol problem, it displays the percentage of current and former youth drinkers (15-19 years old) by country.</h4>
+        <h3>Tool Description</h3>
+        <p>I choose tree map as my main visualization because the dataset including nearly 200 variables, which are county names. Therefore, displaying a bar chart or bubble chart would be difficult to keep track of all the countries. Also, the dataset include the region of places, so I choose to use colors for different regions in order to show differences between regions. I used buttons as my controlling element, so people can click buttons to see former female drinkers and current female drinkers. By clicking the buttons, the tree maps will show changes in different categories. Also, it is easy to tell the changes in each region as a whole, as well as compare between regions and countries. </p>
+        <p>For all controlling elements, it enables users to ask which region has the largest current/former male/female youth drinkers. It also allows users to ask is there a big difference between female and male drinkers as people can switch back and forth to see the changes. Users can also ask about which region changes the most from former drinkers to current drinkers. What I've found from this visualization is that Latin America and Europe have the largest former male drinkers, and there are not huge differences between former male drinkers and female drinkers. Europe also has the largest current male drinkers obviously, especially for female drinkers, there are more. Also, a lot of countries in each region have really similar percentages in general.</p>
+
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+				<input value="former_male" type="radio" name="options" id="option1" autocomplete="off">Former Male
+			</label>
+            <label class="btn btn-primary">
+				<input value="former_female" type="radio" name="options" id="option2" autocomplete="off" >Former Female
+			</label>
+            <label class="btn btn-primary active">
+				<input value="current_male" type="radio" name="options" id="option2" autocomplete="off" checked>Current Male
+			</label>
+            <label class="btn btn-primary">
+                <input value="current_female" type="radio" name="options" id="option2" autocomplete="off">Current Female
+            </label>
+        </div>
+
+        <h2>World Youth Alcohol Usage in 2010</h2>
+        <div id="vis"></div>
+</body>
+
+<!-- your script file -->
+<script src="js/main.js"></script>
+
+</html>
